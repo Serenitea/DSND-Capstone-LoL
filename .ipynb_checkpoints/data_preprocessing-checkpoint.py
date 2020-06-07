@@ -68,6 +68,32 @@ def extract_match_results(gameId):
         match_stats[param+'diff'] = match_detail['teams'][0][param] - match_detail['teams'][1][param]
     return match_stats
 
+def create_obj_df(timeline):
+    '''
+    Create a pandas dataframe of neutral objectives taken in the match timeline given.
+    OUTPUT df: monsterType, DragElement, team that captured objective (red or blue)
+    '''
+    match_obj = []
+    for i in range(len(match_timeline)):
+        for event in match_timeline[i]['events']:
+            if event['type'] == 'ELITE_MONSTER_KILL':
+                if event['killerId'] == 0:
+                    pass
+                elif event['killerId'] > 0:
+                    obj = {}
+                    obj['ObjectiveType'] = event['monsterType']
+                    if event['monsterType'] == 'DRAGON':
+                        obj['DragElement'] = event['monsterSubType']
+                    obj['timestamp'] = event['timestamp']
+                    if 1<= event['killerId'] <= 5:
+                        obj['team'] = 'blue'
+                    elif 6<= event['killerId'] <= 10:
+                        obj['team'] = 'red'
+                    match_obj.append(obj)
+    if len(match_obj) > 0:
+        obj_timeline_df = pd.DataFrame(match_obj)
+        return obj_timeline_df
+                    
 def extract_matchstate_atm(gameId, time):
     '''
     Extract information of captured neutral objectives at 5 minute timeframes intervals 
