@@ -15,9 +15,9 @@ There should be no necessary libraries to run the code here beyond the Anaconda 
 
 ## Project Motivation<a name="motivation"></a>
 
-This project aims to provide insight on the relative importance of neutral objectives throughout the course of the game, helping players make optimal decisions regarding objectives. Although there are some predictive models for league, such as based on champion selection and professional players, I have not found one focused on the importance of objectives nor one that is up-to-date with the latest objective changes for the current season.
+This project aims to provide insight on the relative importance of neutral objectives throughout the course of the MOBA game League of Legends, ultimately helping players make optimal in-game decisions. Although there are some predictive models for League, such as using champion selection and professional players to predict outcome, I have not found one focused on the importance of objectives nor one that is up-to-date with the latest objective changes for the current season.
 
-The anaylzed match data was extracted via the Riot Games API and contains over 20,000 NA high elo solo/duo ranked matches from masters, Grandmasters, and Challenger tier players in the North American server.
+The anaylzed match data was extracted via the Riot Games API and contains over 20,000 NA high elo solo/duo ranked matches from masters, Grandmasters, and Challenger tier players in the North American server from patch 10.11.
 
 ## File Descriptions <a name="files"></a>
 
