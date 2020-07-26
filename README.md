@@ -29,9 +29,9 @@ Data folder - most of the original survey data and processed data are saved here
 
 
 ## Results<a name="results"></a>
-
+[Github](https://github.com/Serenitea/DSND-Capstone-LoL)
 The main findings of the code can be found at the post available [here](https://medium.com/@themaryzhou/is-that-dragon-soul-worth-it-a85789f55c2f).
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
-Credits to Riot Games for the data.
+Credits to Riot Games for the data through the [Riot API](https://developer.riotgames.com/apis). Thanks to the [riotwatcher wrapper API](https://riot-watcher.readthedocs.io/en/) for facilitating data extraction.
